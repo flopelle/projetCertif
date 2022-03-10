@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block carousel %}{% endblock %}
+
+{% block content %}
+<!-- Three columns of text below the carousel -->
+<h3>Nos meilleures ventes</h3>
+<p>Découvrez nos articles les plus vendus</p>
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-3">
+                    {% include 'product/single_product.html.twig' %}
+                </div>
+            {% endfor %}
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Venez découvrir la boutique MangaFans</h2>
+                <p class="lead">Venez Nombreux utiliser et faire fructifier MangaFans</p>
+            </div>
+            <div class="col-md-5">
+               <img src="{{ asset('assets/img/onepiece.jpeg') }}" class="img-fluid" alt="Brook one-piece">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Les nouveautés arrivent bientôt</span></h2>
+                <p class="lead">Soyez au courant des dernières nouveautés</p>
+            </div>
+            <div class="col-md-5">
+            <img src="{{ asset('assets/img/ussop.png') }}" class="img-fluid" alt="Ussop one-piece">
+            </div>
+        </div><br><br>
+
+        <!-- /END THE FEATURETTES -->
+{% endblock %}
