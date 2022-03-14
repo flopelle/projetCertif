@@ -35,7 +35,7 @@ class ContactController extends AbstractController
                 'success',
                 'Votre Email a bien été envoyé',
             ); 
-            return $this->redirectToRoute('products');   
+            return $this->redirectToRoute('home');   
         }
 
         return $this->renderForm('contact/index.html.twig', [
