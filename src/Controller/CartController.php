@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Classe\Cart;
 use App\Entity\Product;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -27,10 +28,15 @@ class CartController extends AbstractController
     }
 
     #[Route('/cart/add/{id}', name: 'add_to_cart')]
-    public function add(Cart $cart, $id)
+    public function add(Cart $cart, Request $request , $id)
     {
         $cart->add($id);
-        return $this->redirectToRoute('cart');
+        $this->addFlash(
+            'success',
+            'Votre article a bien été ajouté au panier',
+        ); 
+        $referer = $request->headers->get('referer');
+        return $this->redirect($referer);   
     }
 
     #[Route("/cart/remove", name: "remove_my_cart")]
