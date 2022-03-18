@@ -2,10 +2,6 @@
     color: #fff ;
 }
 
-nav.navbar.navbar-expand-md.navbar-dark.fixed-top { 
-    background-color: black;
-}
-
 body {
     position: relative;
 }
@@ -19,7 +15,6 @@ main {
     position: absolute;
     width: 100%;
     color: #fff;
-    background-color: black;
     padding-top: 5px;
     margin-top: 50px;
 }
