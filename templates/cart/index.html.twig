@@ -50,8 +50,8 @@
     </table>
     <div class="text-right mb-5">
         <b>Nombre de produits :</b> ... {{ cart|length }} <br/>
-        <b>Total de mon panier :</b> ... {{ (total / 100 ) | number_format(2, ',','.' ) }} €
-        <a href="{{ path('order') }}" class="btn btn-success btn-block mt-3">Valider mon panier</a></br>
+        <b>Total de mon panier :</b> ... {{ (total / 100 ) | number_format(2, ',','.' ) }} € <br/>
+        <a href="{{ path('order') }}" class="btn btn-success mt-3 mb-2">Valider mon panier</a></br>
         <a href="{{ path('products') }}" class="btn btn-primary">Continuer vos achats</a>
 
     </div>
