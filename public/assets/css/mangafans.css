@@ -126,3 +126,7 @@ p {
     margin-bottom: 10px;
     font-size: small;
 }
+
+.fav-img {
+    height: 300px;
+}
