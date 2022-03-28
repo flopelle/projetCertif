@@ -156,7 +156,7 @@ class ResetPasswordController extends AbstractController
         }
 
         $email = (new TemplatedEmail())
-            ->from(new Address('florian97pelle@gmail.com', 'Admin MangaFans'))
+            ->from(new Address('admin@mangafans.fr', 'Admin MangaFans'))
             ->to($user->getEmail())
             ->subject('Your password reset request')
             ->htmlTemplate('reset_password/email.html.twig')
