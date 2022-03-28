@@ -62,7 +62,6 @@ class AccountAddressController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->entityManager->flush();
             return $this->redirectToRoute('account_address');
-
         }
 
         return $this->render('account/address_form.html.twig', [
@@ -79,9 +78,6 @@ class AccountAddressController extends AbstractController
             $this->entityManager->remove($address);
             $this->entityManager->flush();
         }
-            return $this->redirectToRoute('account_address');
-
-        }
-    
-
+        return $this->redirectToRoute('account_address');
+    }
 }
