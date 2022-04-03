@@ -6,6 +6,7 @@
     <h1>Ma commande {{ order.reference }}</h1>
     <a href="{{ path('account_order') }}">Retour</a>
     <hr><strong></strong>
+    <!-- affichage State Commande -->
     <strong>Statut de la commande : </strong>
     {% if order.state == 1 %}
         Paiement accepté

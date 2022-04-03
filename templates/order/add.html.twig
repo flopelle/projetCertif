@@ -11,6 +11,7 @@
     <hr>
     <div class="row">
         <div class="col-md-6">
+        <!-- Choix de l'addresse et du transporteur -->
             <strong>Mon adresse de livraison</strong><br/>
             <div class="form-check mt-4">
                 {{ delivery|raw }}
@@ -66,7 +67,7 @@
         var stripe = Stripe("pk_test_51KUYjABlNl7gq8ajCQI0Hh2cGT4Nf4rUPzUpcaaTSIjTPhPQhgoscjr1LJ8UPoY9AOlwMQJZMyoBmkq5WSealQx800mMY4tm7c");
         var checkoutButton = document.getElementById("checkout-button");//recupère le bouton
 
-        checkoutButton.addEventListener("click", function () {//ecouter lorsque l'utilsateur clic sur le bouton
+        checkoutButton.addEventListener("click", function () {//écouter lorsque l'utilsateur clic sur le bouton
                 fetch("/commande/create-session/{{ reference }}", {
                     method: "POST",
 

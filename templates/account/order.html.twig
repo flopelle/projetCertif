@@ -28,6 +28,7 @@ Vous pouvez gérer toutes vos commandes dans cet espace.<br />
     <td><span class="badge badge-secondary bg-dark">{{ order.reference }}</span></td>
   
     <td>
+        <!-- Selection State Commande -->
         {% if order.state == 1 %}
             Paiement accepté
         {% elseif order.state == 2 %}

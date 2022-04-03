@@ -13,6 +13,7 @@ Vous pouvez gérer toutes vos adresses dans cet espace.<br/>
     Vous n'avez pas d'adresses ajouter dans votre compte client. Pour ajouter <a href="{{ path('account_address_add') }}">Cliquer ici</a>
 </p>
 {% else %}
+    <!-- Affichage des addresses des utilisateurs -->
    <div class="row">
   {% for address in app.user.addresses %}
   <div class="col-md-4">
